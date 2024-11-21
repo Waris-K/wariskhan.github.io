@@ -84,7 +84,7 @@ a img{border:0px;}
 	border-radius: 50%;
 	width: 230px;
 	height: 230px;
-	margin-top: 45%;
+	margin-top: 50%;
 	margin-bottom: 10%;
 	object-fit: cover; /* Ensures the image fills the area */
 }
