@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Waris Khan</title>
@@ -28,9 +29,8 @@ to.css" type="text/css" media="screen" charset="utf-8" />
 </head>
 
 <body>
-    <!-- Sidebar Section -->
-    <div class="container">
-        <div class="left-side">
+	<div class="container">
+		<div class="left-side">
             <div class="sidebar">
                 <a href="index.html">
                     <img src="images/profile_pic.jpg" alt="Waris Khan">
@@ -39,18 +39,13 @@ to.css" type="text/css" media="screen" charset="utf-8" />
                     Technology</p>
 
                 <div class="contact-info">
-                    <button class="contact-btn" onclick="window.location.href='mailto:warisk@vt.edu'"><i
-                            class="fa fa-envelope" style="font-size:30px;color: #0a66c2;"></i>
+                    <button class="contact-btn" onclick="window.location.href='mailto:warisk@vt.edu'" ><i class="fa fa-envelope" style="font-size:30px;color: #0a66c2;"></i>
                     </button>
-                    <button class="contact-btn"
-                        onclick="window.location.href='https://www.linkedin.com/in/waris-khan-s/'"><i
-                            class="fa fa-linkedin" style="font-size:30px;color: #0a66c2;"></i>
+                    <button class="contact-btn" onclick="window.location.href='https://www.linkedin.com/in/waris-khan-s/'"><i class="fa fa-linkedin" style="font-size:30px;color: #0a66c2;"></i>
                     </button>
-                    <button class="contact-btn" onclick="window.location.href='https://github.com/Waris-K'"><i
-                            class="fa fa-github" style="font-size:30px;color: #0a66c2;"></i>
+                    <button class="contact-btn" onclick="window.location.href='https://github.com/Waris-K'"><i class="fa fa-github" style="font-size:30px;color: #0a66c2;"></i>
                     </button>
-                    <button class="contact-btn" onclick="window.location.href='https://x.com/war_is11'"><i
-                            class="fa fa-twitter" style="font-size:30px;color: #0a66c2;"></i>
+                    <button class="contact-btn" onclick="window.location.href='https://x.com/war_is11'"><i class="fa fa-twitter" style="font-size:30px;color: #0a66c2;"></i>
                     </button>
                 </div>
                 <a href="about.html">About</a>
@@ -64,331 +59,121 @@ to.css" type="text/css" media="screen" charset="utf-8" />
                 <a href="blog.html">Blogs</a>
             </div>
         </div>
-        <div class="right-side">
-            <div class="insidecontainer">
-                <div id="about">
-                    <div class="content">
-                        <h1><strong>Understanding the Dirac Delta Function</strong></h1>
-                
-                        <p>
-                            As someone passionate about physics and its mathematical underpinnings, I’ve always found it fascinating how certain concepts, though abstract, 
-                            become essential in solving real-world problems. One such concept that has intrigued me for years is the Dirac delta function. I’ve often wondered 
-                            why such a peculiar function is needed, what role it plays, and how it connects to the physical world around us. It wasn’t until I started diving 
-                            deeper into the relationships between vector fields and their properties—especially divergence—that I began to fully appreciate the power and elegance 
-                            of the Dirac delta function.
-                        </p>
-                
-                        <p>
-                            In this post, I’ll share my journey of understanding the Dirac delta function, the motivation behind using divergence, and how we can apply these 
-                            concepts in various fields like electromagnetism, gravitational physics, and beyond.
-                        </p>
-                
-                        <h2><strong>What is the Dirac Delta Function?</strong></h2>
-                        <p>
-                            At first glance, the Dirac delta function seems almost paradoxical. It's not a function in the traditional sense. Instead, it's 
-                            what’s called a <em>generalized function</em> or a <em>distribution</em>. Mathematically, the Dirac delta function <em>\(\delta(x)\)</em> 
-                            is defined as being zero everywhere except at a single point, where it is "infinitely" large in such a way that its integral over all space equals 1:
-                        </p>
-                        
-                        \[
-                        \int_{-\infty}^{\infty} \delta(x) \, dx = 1.
-                        \]
-                
-                        <p>
-                            This peculiar behavior makes it a powerful tool for modeling phenomena that are inherently localized in space or time. 
-                            To understand its significance, we first need to explore the concept of <strong>divergence</strong> and why it matters.
-                        </p>
-                
-                        <h2><strong>Divergence: What Is It and Why Does It Matter?</strong></h2>
-                        <p>
-                            The concept of divergence is fundamental to understanding vector fields and their behavior in space. Mathematically, divergence measures how much 
-                            a vector field spreads out or converges at a given point. To lay the groundwork, let’s first define the divergence theorem.
-                        </p>
-                
-                        <h3>Divergence Theorem</h3>
-                        <p>
-                            The <a href="https://en.wikipedia.org/wiki/Divergence_theorem" target="_blank">divergence theorem</a>, also known as Gauss's theorem, relates the flow (flux) of a vector field through a closed surface to the divergence of the 
-                            field inside the volume enclosed by that surface. In mathematical terms:
-                        </p>
-                
-                        \[
-                        \int_V (\nabla \cdot \mathbf{v}) \, d\tau = \int_S (\mathbf{v} \cdot \mathbf{n}) \, da
-                        \]
-                
-                        <p>Here:</p>
-                        <ul>
-                            <li>\(V\): The volume enclosed by the surface \(S\).</li>
-                            <li>\(S\): The closed surface bounding \(V\).</li>
-                            <li>\(\mathbf{n}\): The outward unit normal to the surface \(S\).</li>
-                        </ul>
-                
-                       
-                
-                        <p>The divergence theorem can be expressed in various coordinate systems:</p>
-                        <ul>
-                            <li><strong>Cartesian Coordinates (x,y,z):</strong></li>
-                            \[
-                            \nabla \cdot \mathbf{v} = \frac{\partial v_x}{\partial x} + \frac{\partial v_y}{\partial y} + \frac{\partial v_z}{\partial z}
-                            \]
-                
-                            <li><strong>Cylindrical Coordinates (r, \(\theta\), z):</strong></li>
-                            \[
-                            \nabla \cdot \mathbf{v} = \frac{1}{r} \frac{\partial}{\partial r}(r v_r) + \frac{1}{r} \frac{\partial v_\theta}{\partial \theta} + \frac{\partial v_z}{\partial z}
-                            \]
-                
-                            <li><strong>Spherical Coordinates (r, \(\theta\), \(\phi\)):</strong></li>
-                            \[
-                            \nabla \cdot \mathbf{v} = \frac{1}{r^2} \frac{\partial}{\partial r}(r^2 v_r) + \frac{1}{r \sin\theta} \frac{\partial}{\partial \theta}(\sin\theta v_\theta) + \frac{1}{r \sin\theta} \frac{\partial v_\phi}{\partial \phi}
-                            \]
-                        </ul>
-                
-                        <h3>Connecting Divergence to Real-World Fields</h3>
-                        <p>
-                            To illustrate the concept of divergence and its deeper implications, let’s consider the vector field:
-                        </p>
-                
-                        \[
-                        \mathbf{v} = \frac{\hat{r}}{r^2}.
-                        \]
-                
-                        <p>This field is directed radially outward at every point in space, with a characteristic \(1/r^2\) dependence. This form is not chosen arbitrarily—it represents:</p>
-                        <ul>
-                            <li>The electric field of a point charge in electrodynamics:</li>
-                            \[
-                            \mathbf{E} = \frac{q}{4\pi \epsilon_0 r^2} \hat{r}.
-                            \]
-                
-                            <li>The gravitational field of a point mass:</li>
-                            \[
-                            \mathbf{g} = -\frac{GM}{r^2} \hat{r}.
-                            \]
-                
-                            <li>Radiation intensity from a point source:</li>
-                            \[
-                            I(r) = \frac{P}{4\pi r^2}\hat{r}.
-                            \]
-                        </ul>
-                
-                        <p>Thus, studying this field gives insights applicable to many physical phenomena. But, as we calculate its divergence, we encounter a <b>paradox\(\dots\)</b></p>
-                
-                       <!--<h3>The Paradox and Resolution</h3>-->
-                       <p>Let us carefully analyze the divergence of the vector field:</p>
-                
-                \[
-                \mathbf{v} = \frac{\hat{r}}{r^2},
-                \]
-                <figure id="vector-field">
-                    <img src="images/divergence.png" alt="Vector Field Radially Outward" width="400">
-                    <figcaption>Figure 1: The vector field \( \mathbf{v} = \frac{\hat{r}}{r^2} \), directed radially outward.</figcaption>
-                </figure>
-                <p>where \(\hat{r}\) is the radial unit vector and \(r = |\mathbf{r}|\). This field is directed radially outward and decreases in magnitude as \(1/r^2\). 
-                    Intuitively, such a field appears to have a large divergence. However, as we calculate, an intriguing paradox arises.</p>
-                
-                <h4>Step 1: Calculating Divergence</h4>
-                <p>Using the formula for divergence in spherical coordinates, where \(\mathbf{v} = v_r \hat{r}\) and \(v_r = 1/r^2\), we have:</p>
-                
-                \[
-                \nabla \cdot \mathbf{v} = \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 v_r \right).
-                \]
-                
-                <p>Substituting \(v_r = \frac{1}{r^2}\):</p>
-                
-                \[
-                \nabla \cdot \mathbf{v} = \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \cdot \frac{1}{r^2} \right).
-                \]
-                
-                <p>Simplify the term inside the derivative:</p>
-                
-                \[
-                r^2 \cdot \frac{1}{r^2} = 1.
-                \]
-                
-                <p>Thus:</p>
-                
-                \[
-                \nabla \cdot \mathbf{v} = \frac{1}{r^2} \cdot \frac{\partial}{\partial r}(1) = \frac{1}{r^2} \cdot 0 = 0.
-                \]
-                
-                <p>This result indicates that the divergence is zero.<!--except potentially at \(r = 0\), where the field becomes undefined due to division by zero.--> </p>
-                
-                <h4>Step 2: Calculating the Flux</h4>
-                <p>To further investigate, let’s calculate the flux of \(\mathbf{v}\) through a spherical surface of radius \(R\) centered at the origin. The flux through a closed surface \(S\) is given by:</p>
-                
-                \[
-                \Phi = \int_S \mathbf{v} \cdot d\mathbf{a}.
-                \]
-                
-                <p>In spherical coordinates, the surface area element is:</p>
-                
-                \[
-                d\mathbf{a} = R^2 \sin\theta \, d\theta \, d\phi \, \hat{r}.
-                \]
-                
-                <p>Substituting \(\mathbf{v} = \frac{\hat{r}}{r^2}\) and \(r = R\):</p>
-                
-                \[
-                \mathbf{v} \cdot d\mathbf{a} = \frac{\hat{r}}{R^2} \cdot \left( R^2 \sin\theta \, d\theta \, d\phi \, \hat{r} \right) = \sin\theta \, d\theta \, d\phi.
-                \]
-                
-                <p>Integrating over the entire surface of the sphere:</p>
-                
-                \[
-                \Phi = \int_0^{2\pi} \int_0^\pi \sin\theta \, d\theta \, d\phi.
-                \]
-                
-                <p>First, evaluate the \(\theta\)-integral:</p>
-                
-                \[
-                \int_0^\pi \sin\theta \, d\theta = \left[ -\cos\theta \right]_0^\pi = -\cos\pi + \cos 0 = 2.
-                \]
-                
-                <p>Next, evaluate the \(\phi\)-integral:</p>
-                
-                \[
-                \int_0^{2\pi} d\phi = 2\pi.
-                \]
-                
-                <p>Combining these results:</p>
-                
-                \[
-                \Phi = 2 \cdot 2\pi = 4\pi.
-                \]
-                
-                <p>The flux through the spherical surface is \(4\pi\), and crucially, this result is independent of the radius \(R\).</p>
-                
-                <h4>Step 3: The Paradox</h4>
-                <p>The flux calculation shows that the total flux is constant at \(4\pi\), no matter how small the sphere. For the divergence theorem to 
-                    hold, the divergence \(\nabla \cdot \mathbf{v}\) must integrate to \(4\pi\) over the volume enclosed by the sphere. However, our divergence 
-                    calculation showed that \(\nabla \cdot \mathbf{v} = 0\). Is the divergence theorem wrong?</p>
-                
-                <p>This contradiction is resolved by recognizing that \(\nabla \cdot \mathbf{v}\) is not a conventional function but instead a generalized 
-                    function that captures the behavior of a "point source" at \(r = 0\). This behavior is described using the Dirac delta function which is explained in subsequent sections</p>
-                
-                
-                
-                        </p>
-                
-                        <h2><strong>The Dirac Delta Function: One and Three Dimensions</strong></h2>
-                        <p>
-                            The Dirac delta function, \(\delta(x)\), is a generalized function defined as zero everywhere except at a single point, where it becomes infinitely large 
-                            while maintaining a unit integral. 
-                        </p>
-                
-                        
-                        <h3>The One-Dimensional Dirac Delta Function</h3>
-                        <p>
-                            The one-dimensional Dirac delta function, denoted as \(\delta(x)\), can be visualized as an infinitely tall, infinitesimally narrow spike centered at \(x = 0\), 
-                            with an area of 1 (see <a href="#fig-delta-1d">Figure 2</a>). Mathematically:
-                        </p>
-                
-                        \[
-                        \delta(x) =
-                        \begin{cases} 
-                        0, & x \neq 0, \\
-                        \infty, & x = 0,
-                        \end{cases}
-                        \]
-                
-                        \[
-                        \int_{-\infty}^\infty \delta(x) \, dx = 1.
-                        \]
-                
-                        <figure id="fig-delta-1d">
-                            <img src="images/dirac_delta.png" alt="One-Dimensional Dirac Delta Function" width="400px">
-                            <figcaption>Figure 2: The one-dimensional Dirac delta function \(\delta(x)\), representing a spike at \(x = 0\) with an area of 1.</figcaption>
-                        </figure>
-                
-                        <p>Although \(\delta(x)\) is not a function in the traditional sense—since its value is infinite at \(x = 0\)—it is a generalized function or distribution. 
-                            It can be understood as the limiting case of sequences of ordinary functions, such as rectangles of height \(n\) and width \(1/n\), or isosceles 
-                            triangles with height \(n\) and base \(2/n\) (see <a href="#fig-delta-sequence">Figure 3</a>).</p>
-                
-                        <figure id="fig-delta-sequence">
-                            <img src="images/dirac_delta_rect_tri.png" alt="Approximations of the Dirac Delta Function" width="800px">
-                            <figcaption>Figure 3: Approximating the Dirac delta function using rectangles and triangles.</figcaption>
-                        </figure>
-                
-                        <h4>Properties of the Dirac Delta Function</h4>
-                        <p>The delta function has several essential properties, the most important being its ability to "pick out" the value of a function at a specific point. If \(f(x)\) is an ordinary, continuous function, then:</p>
-                
-                        \[
-                        f(x) \delta(x) = f(0) \delta(x),
-                        \]
-                
-                        \[
-                        \int_{-\infty}^\infty f(x) \delta(x) \, dx = f(0).
-                        \]
-                
-                        <p>This means that under an integral, the delta function acts as a sampling operator, extracting the value of \(f(x)\) at \(x = 0\).</p>
-                
-                        <p>The delta function can also be shifted to a different point, \(x = a\), as:</p>
-                
-                        \[
-                        \delta(x - a) =
-                        \begin{cases} 
-                        0, & x \neq a, \\
-                        \infty, & x = a,
-                        \end{cases}
-                        \]
-                
-                        \[
-                        \int_{-\infty}^\infty f(x) \delta(x - a) \, dx = f(a).
-                        \]
-                
-                        <h3>The Three-Dimensional Dirac Delta Function</h3>
-                        <p>Extending to three dimensions, the Dirac delta function is defined as:</p>
-                
-                        \[
-                        \delta^3(\mathbf{r}) = \delta(x) \delta(y) \delta(z),
-                        \]
-                
-                        <p>where \(\mathbf{r} = x\hat{x} + y\hat{y} + z\hat{z}\) is the position vector. The three-dimensional delta function is zero everywhere except at \((x, y, z) = (0, 0, 0)\), and its volume integral is 1:</p>
-                
-                        \[
-                        \int_{\text{all space}} \delta^3(\mathbf{r}) \, d\tau = \int_{-\infty}^\infty \int_{-\infty}^\infty \int_{-\infty}^\infty \delta(x) \delta(y) \delta(z) \, dx \, dy \, dz = 1.
-                        \]
-                
-                        <p>As in the one-dimensional case, the three-dimensional delta function “picks out” the value of a function at a specific point:</p>
-                
-                        \[
-                        \int_{\text{all space}} f(\mathbf{r}) \delta^3(\mathbf{r} - \mathbf{a}) \, d\tau = f(\mathbf{a}).
-                        \]
-                
-                        <h4>Resolution of the Paradox</h4>
-                        <p>Returning to our earlier example of \(\mathbf{v} = \frac{\hat{r}}{r^2}\), we now recognize that its divergence can be expressed using the three-dimensional Dirac delta function. While the divergence \(\nabla \cdot \mathbf{v}\) is zero everywhere except at \(r = 0\), its integral over any volume containing the origin is \(4\pi\). This is precisely the defining property of the Dirac delta function:</p>
-                
-                        \[
-                        \nabla \cdot \left( \frac{\hat{r}}{r^2} \right) = 4\pi \delta^3(\mathbf{r}).
-                        \]
-                
-                        <p>This compact expression resolves the paradox by accounting for the singularity at the origin. The delta function captures the contribution of the point source at \(r = 0\), ensuring consistency with the divergence theorem.</p>
-                
+		<div class="right-side">
+			<!-- <div class="header">
+				<div id="name"><a href="index.html">Waris Khan</a></div>
+				<ul id="main-menu">
+					<li><a href="#" onclick='window.open("https://drive.google.com/file/d/10MYcRq5gHp9Tr8hDHViaPg1hdrbS4rHR/view?usp=sharing", "_blank");'>CV</a></li>
+					<li><a href="publications.html">Publications</a></li>
+					<li><a href="education.html">Education</a></li>
+					<li><a href="experience.html">Experience</a></li>
+					<li><a href="beyond_research.html">Beyond Research</a></li>
+				</ul>
+			</div> -->
+			<div class="insidecontainer">
+				<div id="about">
+					<div class="content">
+
+                        <header>
+                            <h1><strong>Ghalib's Humorous Genius in Ghazal Poetry</strong></h1>
+                        </header>
+
+                        <section>
+                            <p><strong>Ghazal</strong> is a unique oriental poetic form in which each couplet represents
+                                a complete mood and is independent of the other. Mir, the most sophisticated of our
+                                earlier poets, carried the style to perfection within the limits of this form.
+                                <em>Ghalib</em>, however, enriched the ghazal by broadening its horizon. The range and
+                                depth of Ghalib's ghazals are astonishing. They are equally thrilling and captivating.
+                                Not only does Ghalib confront his poignant grief, but he also laughs away his sorrow. A
+                                perennial fountain of humor bursts from most of his couplets. This dominant
+                                characteristic makes his poetry remarkably humorous, a glorious aspect that,
+                                unfortunately, has only received sporadic mention.</p>
+
+                            <p>In fact, there is a bewildering variety of humor found in Ghalib's poetry, from the
+                                sophisticated to the coarse, from jibe to irony, from parody to pun. It is, however, in
+                                subtle humor that he truly excels.</p>
+                        </section>
+
+                        <section>
+                            <h2><strong>The Subtlety of Ghalib’s Humor</strong></h2>
+                            <p>Of the numerous examples of subtlety, a fine example is provided in the opening couplet
+                                of his <em>Diwan</em>. Unlike the usual practice of beginning a collection with praise
+                                of Allah, the merciful, Ghalib opens with a complaint, admirably cloaking his
+                                left-handed salute to the Almighty in oblique allusion. Astonishingly, his higher form
+                                of humor is exceedingly mild, like light mint-flavored tea, as he jocularly hints at the
+                                veiled cruelty of God or belittles His generosity by highlighting man’s own boundless
+                                greed. In one couplet, Ghalib ironically questions the promise of paradise:</p>
+
+                            <blockquote>
+                                <p><strong>Hum ko maloom hai jannat ki haqiqat lekin<br>
+                                        Dil ke behlane ko Ghalib yeh khayal achcha hai</strong></p>
+                                <p><em>(We know the reality of Paradise, O' Ghalib, but to keep the heart happy, this
+                                        idea is good.)</em></p>
+                            </blockquote>
+                        </section>
+
+                        <section>
+                            <h2><strong>Ghalib's Satire on Society</strong></h2>
+                            <p>Essentially a man of his age, Ghalib's poetry also reflects the prevalent vices in
+                                society during the period of decadence of the Mughal Empire, when moral values were at a
+                                low ebb. Such couplets bristle with sarcasm, banter, and quips. Ghalib often paints
+                                characters like a suitor as a wayward lounger, a playful fiancée with a quiver full of
+                                arrows, or a miserly <em>saqi</em> (wine-bearer), crafting these personas to illustrate
+                                the incongruities in society that both entertain and provoke thought.</p>
+                        </section>
+
+                        <section>
+                            <h2><strong>The Brainteasers of Ghalib's Humor</strong></h2>
+                            <p>Sometimes, Ghalib's humor takes on a mental titillation, becoming a kind of brainteaser.
+                                This complex humor requires the reader to work through layers of meaning. One fine
+                                example of this is:</p>
+
+                            <blockquote>
+                                <p><strong>Tujh se to kutch kalam nahin lekin ai nadeem<br>
+                                        Mera salam kehiyo jo namabar miley</strong></p>
+                                <p><em>(I told the messenger to give you my message. He gave you his heart, fellow
+                                        lover, how well you were schooled, I salute you.)</em></p>
+                            </blockquote>
+
+                            <p>Here, Ghalib’s wit is multi-layered, allowing the reader to unearth the depth of his
+                                thoughts with each reading.</p>
+                        </section>
+
+                        <section>
+                            <h2><strong>Wordplay and the Art of Pun</strong></h2>
+                            <p>Even in the most primitive form of humor—puns—Ghalib shines. He infuses new meaning,
+                                playing not only with words but also with ideas. This couplet reveals the logical
+                                ingredients and emotional spice that Ghalib brings to his puns:</p>
+
+                            <blockquote>
+                                <p><strong>Ishq se tabiyat ne zeest ka maza paya<br>
+                                        Dard ki dawa payee dard be dawa paya</strong></p>
+                                <p><em>(From love itself, nature has found love's savior, found the cure from pain,
+                                        found the pain without remedy.)</em></p>
+                            </blockquote>
+                        </section>
+
+                        <section>
+
+                            <p>Ghalib truly has a couplet for every emotion, and yet, his wit and humor remain dominant.
+                                His poetry sparkles with mirth, intellect, and irony—elements that make his work not
+                                only timeless but also remarkably entertaining. Ghalib’s ghazals invite us to explore
+                                humor in all its forms, from lighthearted jest to deeply philosophical irony, capturing
+                                life’s most profound truths in each couplet.</p>
+                        </section>
+
+                        <footer>
+                            <p><strong>Previous Blog:</strong> <a href="bazeecha-e-atfal.html">Bazeecha-e-atfal</a></p>
+                        </footer>
+
                     </div>
-                    <!--End contact Section-->
-
-                </div>
-            </div>
-        </div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
 </body>
-<script type="text/javascript" async 
-src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
-<script type="text/javascript">
-    $(function () {
-        $('#main-menu li a').bind('click', function (event) {
-            var $anchor = $(this);
-
-            $('html, body').stop().animate({
-                scrollTop: $($anchor.attr('href')).offset().top
-            }, 1500, 'easeInOutExpo');
-
-            event.preventDefault();
-        });
-    });
-
-    $(document).ready(function () {
-        $("a[rel^='prettyPhoto']").prettyPhoto({ social_tools: false, deeplinking: false });
-    });
-</script>
 
 </html>
