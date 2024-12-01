@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Waris Khan</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js?ver=3.3"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Waris Khan </title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/prettyPh
+to.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js?ver=3.3"></script>
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <!-- Sidebar Section -->
+    <div class="container">
+        <div class="left-side">
+            <div class="sidebar">
+                <a href="index.html">
+                    <img src="images/profile_pic.jpg" alt="Waris Khan">
+                </a>
+                <p class="bio">Doctoral Student @ Virginia Tech | Ex-ISRO | Indian Institute of Space Science and
+                    Technology</p>
+
+                <div class="contact-info">
+                    <button class="contact-btn" onclick="window.location.href='mailto:warisk@vt.edu'"><i
+                            class="fa fa-envelope" style="font-size:30px;color: #0a66c2;"></i>
+                    </button>
+                    <button class="contact-btn"
+                        onclick="window.location.href='https://www.linkedin.com/in/waris-khan-s/'"><i
+                            class="fa fa-linkedin" style="font-size:30px;color: #0a66c2;"></i>
+                    </button>
+                    <button class="contact-btn" onclick="window.location.href='https://github.com/Waris-K'"><i
+                            class="fa fa-github" style="font-size:30px;color: #0a66c2;"></i>
+                    </button>
+                    <button class="contact-btn" onclick="window.location.href='https://x.com/war_is11'"><i
+                            class="fa fa-twitter" style="font-size:30px;color: #0a66c2;"></i>
+                    </button>
+                </div>
+                <a href="about.html">About</a>
+                <a href="#"
+                    onclick='window.open("https://drive.google.com/file/d/10MYcRq5gHp9Tr8hDHViaPg1hdrbS4rHR/view?usp=sharing", "_blank");'>CV</a>
+
+                <a href="publications.html">Publications</a>
+                <a href="education.html">Education</a>
+                <a href="experience.html">Experience</a>
+                <a href="beyond_research.html">Beyond Research</a>
+                <a href="blog.html">Blogs</a>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="insidecontainer">
+                <div id="about">
+                    <div class="content">
+                        <h1><strong>Understanding the Dirac Delta Function</strong></h1>
+                
+                        <p>
+                            As someone passionate about physics and its mathematical underpinnings, I’ve always found it fascinating how certain concepts, though abstract, 
+                            become essential in solving real-world problems. One such concept that has intrigued me for years is the Dirac delta function. I’ve often wondered 
+                            why such a peculiar function is needed, what role it plays, and how it connects to the physical world around us. It wasn’t until I started diving 
+                            deeper into the relationships between vector fields and their properties—especially divergence—that I began to fully appreciate the power and elegance 
+                            of the Dirac delta function.
+                        </p>
+                
+                        <p>
+                            In this post, I’ll share my journey of understanding the Dirac delta function, the motivation behind using divergence, and how we can apply these 
+                            concepts in various fields like electromagnetism, gravitational physics, and beyond.
+                        </p>
+                
+                        <h2><strong>What is the Dirac Delta Function?</strong></h2>
+                        <p>
+                            At first glance, the Dirac delta function seems almost paradoxical. It's not a function in the traditional sense. Instead, it's 
+                            what’s called a <em>generalized function</em> or a <em>distribution</em>. Mathematically, the Dirac delta function <em>\(\delta(x)\)</em> 
+                            is defined as being zero everywhere except at a single point, where it is "infinitely" large in such a way that its integral over all space equals 1:
+                        </p>
+                        
+                        \[
+                        \int_{-\infty}^{\infty} \delta(x) \, dx = 1.
+                        \]
+                
+                        <p>
+                            This peculiar behavior makes it a powerful tool for modeling phenomena that are inherently localized in space or time. 
+                            To understand its significance, we first need to explore the concept of <strong>divergence</strong> and why it matters.
+                        </p>
+                
+                        <h2><strong>Divergence: What Is It and Why Does It Matter?</strong></h2>
+                        <p>
+                            The concept of divergence is fundamental to understanding vector fields and their behavior in space. Mathematically, divergence measures how much 
+                            a vector field spreads out or converges at a given point. To lay the groundwork, let’s first define the divergence theorem.
+                        </p>
+                
+                        <h3>Divergence Theorem</h3>
+                        <p>
+                            The <a href="https://en.wikipedia.org/wiki/Divergence_theorem" target="_blank">divergence theorem</a>, also known as Gauss's theorem, relates the flow (flux) of a vector field through a closed surface to the divergence of the 
+                            field inside the volume enclosed by that surface. In mathematical terms:
+                        </p>
+                
+                        \[
+                        \int_V (\nabla \cdot \mathbf{v}) \, d\tau = \int_S (\mathbf{v} \cdot \mathbf{n}) \, da
+                        \]
+                
+                        <p>Here:</p>
+                        <ul>
+                            <li>\(V\): The volume enclosed by the surface \(S\).</li>
+                            <li>\(S\): The closed surface bounding \(V\).</li>
+                            <li>\(\mathbf{n}\): The outward unit normal to the surface \(S\).</li>
+                        </ul>
+                
+                       
+                
+                        <p>The divergence theorem can be expressed in various coordinate systems:</p>
+                        <ul>
+                            <li><strong>Cartesian Coordinates (x,y,z):</strong></li>
+                            \[
+                            \nabla \cdot \mathbf{v} = \frac{\partial v_x}{\partial x} + \frac{\partial v_y}{\partial y} + \frac{\partial v_z}{\partial z}
+                            \]
+                
+                            <li><strong>Cylindrical Coordinates (r, \(\theta\), z):</strong></li>
+                            \[
+                            \nabla \cdot \mathbf{v} = \frac{1}{r} \frac{\partial}{\partial r}(r v_r) + \frac{1}{r} \frac{\partial v_\theta}{\partial \theta} + \frac{\partial v_z}{\partial z}
+                            \]
+                
+                            <li><strong>Spherical Coordinates (r, \(\theta\), \(\phi\)):</strong></li>
+                            \[
+                            \nabla \cdot \mathbf{v} = \frac{1}{r^2} \frac{\partial}{\partial r}(r^2 v_r) + \frac{1}{r \sin\theta} \frac{\partial}{\partial \theta}(\sin\theta v_\theta) + \frac{1}{r \sin\theta} \frac{\partial v_\phi}{\partial \phi}
+                            \]
+                        </ul>
+                
+                        <h3>Connecting Divergence to Real-World Fields</h3>
+                        <p>
+                            To illustrate the concept of divergence and its deeper implications, let’s consider the vector field:
+                        </p>
+                
+                        \[
+                        \mathbf{v} = \frac{\hat{r}}{r^2}.
+                        \]
+                
+                        <p>This field is directed radially outward at every point in space, with a characteristic \(1/r^2\) dependence. This form is not chosen arbitrarily—it represents:</p>
+                        <ul>
+                            <li>The electric field of a point charge in electrodynamics:</li>
+                            \[
+                            \mathbf{E} = \frac{q}{4\pi \epsilon_0 r^2} \hat{r}.
+                            \]
+                
+                            <li>The gravitational field of a point mass:</li>
+                            \[
+                            \mathbf{g} = -\frac{GM}{r^2} \hat{r}.
+                            \]
+                
+                            <li>Radiation intensity from a point source:</li>
+                            \[
+                            I(r) = \frac{P}{4\pi r^2}\hat{r}.
+                            \]
+                        </ul>
+                
+                        <p>Thus, studying this field gives insights applicable to many physical phenomena. But, as we calculate its divergence, we encounter a <b>paradox\(\dots\)</b></p>
+                
+                       <!--<h3>The Paradox and Resolution</h3>-->
+                       <p>Let us carefully analyze the divergence of the vector field:</p>
+                
+                \[
+                \mathbf{v} = \frac{\hat{r}}{r^2},
+                \]
+                <figure id="vector-field">
+                    <img src="images/divergence.png" alt="Vector Field Radially Outward" width="400">
+                    <figcaption>Figure 1: The vector field \( \mathbf{v} = \frac{\hat{r}}{r^2} \), directed radially outward.</figcaption>
+                </figure>
+                <p>where \(\hat{r}\) is the radial unit vector and \(r = |\mathbf{r}|\). This field is directed radially outward and decreases in magnitude as \(1/r^2\). 
+                    Intuitively, such a field appears to have a large divergence. However, as we calculate, an intriguing paradox arises.</p>
+                
+                <h4>Step 1: Calculating Divergence</h4>
+                <p>Using the formula for divergence in spherical coordinates, where \(\mathbf{v} = v_r \hat{r}\) and \(v_r = 1/r^2\), we have:</p>
+                
+                \[
+                \nabla \cdot \mathbf{v} = \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 v_r \right).
+                \]
+                
+                <p>Substituting \(v_r = \frac{1}{r^2}\):</p>
+                
+                \[
+                \nabla \cdot \mathbf{v} = \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \cdot \frac{1}{r^2} \right).
+                \]
+                
+                <p>Simplify the term inside the derivative:</p>
+                
+                \[
+                r^2 \cdot \frac{1}{r^2} = 1.
+                \]
+                
+                <p>Thus:</p>
+                
+                \[
+                \nabla \cdot \mathbf{v} = \frac{1}{r^2} \cdot \frac{\partial}{\partial r}(1) = \frac{1}{r^2} \cdot 0 = 0.
+                \]
+                
+                <p>This result indicates that the divergence is zero.<!--except potentially at \(r = 0\), where the field becomes undefined due to division by zero.--> </p>
+                
+                <h4>Step 2: Calculating the Flux</h4>
+                <p>To further investigate, let’s calculate the flux of \(\mathbf{v}\) through a spherical surface of radius \(R\) centered at the origin. The flux through a closed surface \(S\) is given by:</p>
+                
+                \[
+                \Phi = \int_S \mathbf{v} \cdot d\mathbf{a}.
+                \]
+                
+                <p>In spherical coordinates, the surface area element is:</p>
+                
+                \[
+                d\mathbf{a} = R^2 \sin\theta \, d\theta \, d\phi \, \hat{r}.
+                \]
+                
+                <p>Substituting \(\mathbf{v} = \frac{\hat{r}}{r^2}\) and \(r = R\):</p>
+                
+                \[
+                \mathbf{v} \cdot d\mathbf{a} = \frac{\hat{r}}{R^2} \cdot \left( R^2 \sin\theta \, d\theta \, d\phi \, \hat{r} \right) = \sin\theta \, d\theta \, d\phi.
+                \]
+                
+                <p>Integrating over the entire surface of the sphere:</p>
+                
+                \[
+                \Phi = \int_0^{2\pi} \int_0^\pi \sin\theta \, d\theta \, d\phi.
+                \]
+                
+                <p>First, evaluate the \(\theta\)-integral:</p>
+                
+                \[
+                \int_0^\pi \sin\theta \, d\theta = \left[ -\cos\theta \right]_0^\pi = -\cos\pi + \cos 0 = 2.
+                \]
+                
+                <p>Next, evaluate the \(\phi\)-integral:</p>
+                
+                \[
+                \int_0^{2\pi} d\phi = 2\pi.
+                \]
+                
+                <p>Combining these results:</p>
+                
+                \[
+                \Phi = 2 \cdot 2\pi = 4\pi.
+                \]
+                
+                <p>The flux through the spherical surface is \(4\pi\), and crucially, this result is independent of the radius \(R\).</p>
+                
+                <h4>Step 3: The Paradox</h4>
+                <p>The flux calculation shows that the total flux is constant at \(4\pi\), no matter how small the sphere. For the divergence theorem to 
+                    hold, the divergence \(\nabla \cdot \mathbf{v}\) must integrate to \(4\pi\) over the volume enclosed by the sphere. However, our divergence 
+                    calculation showed that \(\nabla \cdot \mathbf{v} = 0\). Is the divergence theorem wrong?</p>
+                
+                <p>This contradiction is resolved by recognizing that \(\nabla \cdot \mathbf{v}\) is not a conventional function but instead a generalized 
+                    function that captures the behavior of a "point source" at \(r = 0\). This behavior is described using the Dirac delta function which is explained in subsequent sections</p>
+                
+                
+                
+                        </p>
+                
+                        <h2><strong>The Dirac Delta Function: One and Three Dimensions</strong></h2>
+                        <p>
+                            The Dirac delta function, \(\delta(x)\), is a generalized function defined as zero everywhere except at a single point, where it becomes infinitely large 
+                            while maintaining a unit integral. 
+                        </p>
+                
+                        
+                        <h3>The One-Dimensional Dirac Delta Function</h3>
+                        <p>
+                            The one-dimensional Dirac delta function, denoted as \(\delta(x)\), can be visualized as an infinitely tall, infinitesimally narrow spike centered at \(x = 0\), 
+                            with an area of 1 (see <a href="#fig-delta-1d">Figure 2</a>). Mathematically:
+                        </p>
+                
+                        \[
+                        \delta(x) =
+                        \begin{cases} 
+                        0, & x \neq 0, \\
+                        \infty, & x = 0,
+                        \end{cases}
+                        \]
+                
+                        \[
+                        \int_{-\infty}^\infty \delta(x) \, dx = 1.
+                        \]
+                
+                        <figure id="fig-delta-1d">
+                            <img src="images/dirac_delta.png" alt="One-Dimensional Dirac Delta Function" width="400px">
+                            <figcaption>Figure 2: The one-dimensional Dirac delta function \(\delta(x)\), representing a spike at \(x = 0\) with an area of 1.</figcaption>
+                        </figure>
+                
+                        <p>Although \(\delta(x)\) is not a function in the traditional sense—since its value is infinite at \(x = 0\)—it is a generalized function or distribution. 
+                            It can be understood as the limiting case of sequences of ordinary functions, such as rectangles of height \(n\) and width \(1/n\), or isosceles 
+                            triangles with height \(n\) and base \(2/n\) (see <a href="#fig-delta-sequence">Figure 3</a>).</p>
+                
+                        <figure id="fig-delta-sequence">
+                            <img src="images/dirac_delta_rect_tri.png" alt="Approximations of the Dirac Delta Function" width="800px">
+                            <figcaption>Figure 3: Approximating the Dirac delta function using rectangles and triangles.</figcaption>
+                        </figure>
+                
+                        <h4>Properties of the Dirac Delta Function</h4>
+                        <p>The delta function has several essential properties, the most important being its ability to "pick out" the value of a function at a specific point. If \(f(x)\) is an ordinary, continuous function, then:</p>
+                
+                        \[
+                        f(x) \delta(x) = f(0) \delta(x),
+                        \]
+                
+                        \[
+                        \int_{-\infty}^\infty f(x) \delta(x) \, dx = f(0).
+                        \]
+                
+                        <p>This means that under an integral, the delta function acts as a sampling operator, extracting the value of \(f(x)\) at \(x = 0\).</p>
+                
+                        <p>The delta function can also be shifted to a different point, \(x = a\), as:</p>
+                
+                        \[
+                        \delta(x - a) =
+                        \begin{cases} 
+                        0, & x \neq a, \\
+                        \infty, & x = a,
+                        \end{cases}
+                        \]
+                
+                        \[
+                        \int_{-\infty}^\infty f(x) \delta(x - a) \, dx = f(a).
+                        \]
+                
+                        <h3>The Three-Dimensional Dirac Delta Function</h3>
+                        <p>Extending to three dimensions, the Dirac delta function is defined as:</p>
+                
+                        \[
+                        \delta^3(\mathbf{r}) = \delta(x) \delta(y) \delta(z),
+                        \]
+                
+                        <p>where \(\mathbf{r} = x\hat{x} + y\hat{y} + z\hat{z}\) is the position vector. The three-dimensional delta function is zero everywhere except at \((x, y, z) = (0, 0, 0)\), and its volume integral is 1:</p>
+                
+                        \[
+                        \int_{\text{all space}} \delta^3(\mathbf{r}) \, d\tau = \int_{-\infty}^\infty \int_{-\infty}^\infty \int_{-\infty}^\infty \delta(x) \delta(y) \delta(z) \, dx \, dy \, dz = 1.
+                        \]
+                
+                        <p>As in the one-dimensional case, the three-dimensional delta function “picks out” the value of a function at a specific point:</p>
+                
+                        \[
+                        \int_{\text{all space}} f(\mathbf{r}) \delta^3(\mathbf{r} - \mathbf{a}) \, d\tau = f(\mathbf{a}).
+                        \]
+                
+                        <h4>Resolution of the Paradox</h4>
+                        <p>Returning to our earlier example of \(\mathbf{v} = \frac{\hat{r}}{r^2}\), we now recognize that its divergence can be expressed using the three-dimensional Dirac delta function. While the divergence \(\nabla \cdot \mathbf{v}\) is zero everywhere except at \(r = 0\), its integral over any volume containing the origin is \(4\pi\). This is precisely the defining property of the Dirac delta function:</p>
+                
+                        \[
+                        \nabla \cdot \left( \frac{\hat{r}}{r^2} \right) = 4\pi \delta^3(\mathbf{r}).
+                        \]
+                
+                        <p>This compact expression resolves the paradox by accounting for the singularity at the origin. The delta function captures the contribution of the point source at \(r = 0\), ensuring consistency with the divergence theorem.</p>
+                
+                    </div>
+                    <!--End contact Section-->
+
+                </div>
+            </div>
+        </div>
+</body>
+<script type="text/javascript" async 
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $('#main-menu li a').bind('click', function (event) {
+            var $anchor = $(this);
+
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top
+            }, 1500, 'easeInOutExpo');
+
+            event.preventDefault();
+        });
+    });
+
+    $(document).ready(function () {
+        $("a[rel^='prettyPhoto']").prettyPhoto({ social_tools: false, deeplinking: false });
+    });
+</script>
+
+</html>

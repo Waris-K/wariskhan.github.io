@@ -53,7 +53,7 @@ a img{border:0px;}
 
 .insidecontainer{
     margin: 10px;
-    margin-top: 120px;
+    /* margin-top: 120px; */
 	margin-left: 250px;
 }
 
@@ -71,7 +71,7 @@ a img{border:0px;}
 	position: fixed;
     height: 100%;
     overflow-x: hidden;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     /* margin-top: 30px; */
 	width: 290px;
 	/* float: left; */
@@ -85,37 +85,67 @@ a img{border:0px;}
 	border-radius: 50%;
 	width: 230px;
 	height: 230px;
-	margin-top: 15%;
-	margin-bottom: 10%;
+	margin-top: 5%;
+	margin-bottom: 2%;
 	object-fit: cover;
 	border: 6px solid rgba(0, 77, 64, 0.4);
 }
 /* .sidebar .bio {
 	font-size: 14px;
 	margin: 10px 0;
-}
-.sidebar .contact-info {
-	display: flex;
+} */
+.sidebar .contact-info .contact-btn {
+	/* display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: center; */
+	cursor: pointer;
+	background-color: #8aaae500 !important;
+	border: none;
 }
-.sidebar .contact-info a {
+.read-more-btn{
+	border-radius: 40px;
+    width: 196px;
+    font-size: 25px;
+    height: 46px;
+    background-color: #6298d666;
+    border-color: cornflowerblue;
+}
+/* .sidebar .contact-info a {
 	color: #333;
 	display: flex;
 	align-items: center;
 	font-size: 13px;
 	text-decoration: none;
 	margin: 5px 0;
-}
-.sidebar .contact-info i {
+} */
+/* .sidebar .contact-info i {
 	font-size: 18px;
 	margin-right: 8px;
 }
 .sidebar .contact-info a:hover {
 	color: tomato;
 } */
-
+.fa.fa-twitter{
+	font-family:sans-serif;
+}
+.fa.fa-twitter::before{
+	content:"𝕏";
+	font-size:1.2em;
+}
 .sidebar a {
+	padding: 15px 8px 9px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+  }
+  .dropdown-container {
+	display: none;
+	background-color: #262626;
+	padding-left: 8px;
+  }
+  
+  .sidebar button a {
 	padding: 15px 8px 9px 16px;
 	text-decoration: none;
 	font-size: 25px;
@@ -237,7 +267,7 @@ a img{border:0px;}
         display: block;
     }
     .insidecontainer{
-        margin-top: 250px;
+        /* margin-top: 20px; */
     }
 }
 .custom-link {
