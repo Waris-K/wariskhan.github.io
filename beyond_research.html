@@ -60,7 +60,15 @@ to.css" type="text/css" media="screen" charset="utf-8" />
                 
                 <a href="publications.html">Publications</a>
                 <a href="education.html">Education</a>
-                <a href="experience.html">Experience</a>
+                <!-- <a href="experience.html">Experience</a> -->
+                <button class="nav-dropdown-btn">Experience
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="experience.html">Experience Overview</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="teaching.html">Teaching</a>
+                </div>
                 <a href="beyond_research.html">Beyond Research</a>
                 <a href="blog.html">Blogs</a>
                 <a href="#"
@@ -180,5 +188,21 @@ to.css" type="text/css" media="screen" charset="utf-8" />
     </script>
 
 </body>
+<script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("nav-dropdown-btn");
+    var i;
 
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script>
 </html>
